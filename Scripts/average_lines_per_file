@@ -1,0 +1,7 @@
+#!/bin/bash          
+total_lines=$(find ../Lender -type f -name "*.swift" -exec cat {} \; | wc -l)
+total_files=$(find ../Lender -type f -name "*.swift" | wc -l)
+
+echo "Total lines of code: $total_lines"
+echo "Total number of files: $total_files"
+echo "Average number of lines per file: $(expr $total_lines / $total_files)"
